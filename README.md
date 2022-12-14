@@ -23,7 +23,7 @@
 docker version
 ```
 
-6. If docker is not running, please run docker and repeat Step 4.
+6. If docker is not running, please run docker and repeat Step 5.
 7. At the terminal, run following command to start `containerized RESTful services` in Go with Postgres database via Docker.
 
 ```bash
@@ -31,43 +31,42 @@ docker version
 docker compose up
 ```
 
-8. Make sure terminal have the following:
+8. Make sure terminal have the following prompt below continue:
 
    ![Fiber cli prompt](./image/fiber-cli.png)
 
-9. Open Postman and start to send RESTful API with correct parameter as stated in API sesison.
+9. Open Postman and start to send RESTful API with correct parameter as stated in API sesison below.
 
 ---
 
 ## API Endpoints Reference
 
-> `GET` http://localhost:3000/
+> `GET` http://localhost:3000
 
-This API will return the raw JSON format of stored object in Postgres. Hence, it will be empty by default and item will be displayed after running `POST` request for at least once and success.
+This API will return the raw JSON format of stored object(s) in Postgres. Hence, it will be empty by default and objects will be displayed after running `POST` request for at least once and success.
 
-````JSON
-Response
+Sample Response
 
 ```json
 [
-{
-  "ID": 1,
-  "CreatedAt": "2022-12-14T14:42:59.162640885Z",
-  "UpdatedAt": "2022-12-14T14:42:59.162640885Z",
-  "DeletedAt": null,
-  "question": "Is this a sample?",
-  "answer": "Yes"
-},
-{
+  {
+    "ID": 1,
+    "CreatedAt": "2022-12-14T14:42:59.162640885Z",
+    "UpdatedAt": "2022-12-14T14:42:59.162640885Z",
+    "DeletedAt": null,
+    "question": "Is this a sample?",
+    "answer": "Yes"
+  },
+  {
     "ID": 2,
     "CreatedAt": "2022-12-14T14:45:11.451989Z",
     "UpdatedAt": "2022-12-14T14:45:11.451989Z",
     "DeletedAt": null,
     "question": "Is this a sample too?",
     "answer": "Yea!"
-}
+  }
 ]
-````
+```
 
 ---
 
